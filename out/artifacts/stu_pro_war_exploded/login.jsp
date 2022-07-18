@@ -27,22 +27,26 @@
         }
     </style>
 
+    <script src="js/jquery.js"></script>
+
 </head>
 <body>
     <div id="main">
         <div id="inner">
-            用户：&nbsp<input type="text" id="u_id"/>
-            <br><br>
-            密码：&nbsp<input type="password" id="u_pwd"/>
-            <br><br>
-            <table>
-                <tr>
-                    <td style="width: 50%; text-align: center"><button id="btn01">重置</button></td>
-                    <td style="text-align: center"><button id="btn02">登录</button></td>
-                </tr>
-            </table>
-
+            <form action="/stu_pro/loginServlet" method="post">
+                用户：&nbsp<input name="username" type="text" id="u_id"/>
+                <br><br>
+                密码：&nbsp<input name="password" type="password" id="u_pwd"/>
+                <br><br>
+                <table>
+                    <tr>
+                        <td><button id="btn01">重置</button></td>
+                        <td><input type="submit" id="btn02" value="登录"></td>
+                    </tr>
+                </table>
+            </form>
         </div>
     </div>
 </body>
+
 </html>
